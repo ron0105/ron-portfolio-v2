@@ -2,7 +2,27 @@
   "permissions": {
     "allow": [
       "Bash(python3:*)",
-      "Bash(npx create-next-app@latest:*)"
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(npx tsc:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/about)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/work)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/thinking)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/contact)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(curl -s http://localhost:3000)",
+      "WebFetch(domain:www.buildwithron.com)",
+      "Bash(node:*)",
+      "Bash(pip3 install:*)",
+      "Bash(pip install:*)",
+      "WebFetch(domain:21st.dev)",
+      "Bash(echo \"PID: $!\")",
+      "Bash(curl:*)",
+      "Bash(sed -i '' 's|mailto:hello@buildwithron.com|mailto:rohan0105@gmail.com|g' /Users/ron/Desktop/ron-portfolio-v2/components/sections/Footer.tsx)",
+      "Bash(sed -i '' 's|mailto:hello@buildwithron.com|mailto:rohan0105@gmail.com|g' /Users/ron/Desktop/ron-portfolio-v2/components/sections/contact/ContactHero.tsx)",
+      "Bash(sed -i '' 's|mailto:hello@ron.xyz|mailto:rohan0105@gmail.com|g' /Users/ron/Desktop/ron-portfolio-v2/components/sections/PersonalStrip.tsx)"
     ]
   }
 }
