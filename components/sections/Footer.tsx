@@ -29,7 +29,7 @@ export default function Footer() {
               </p>
             </Link>
             <p className="font-body text-base text-paper/40 max-w-sm leading-relaxed">
-              Whether you have an idea or just want to think out loud: my inbox is open.
+              Whether you have an idea or just want to think out loud, my inbox is open.
             </p>
           </div>
 
