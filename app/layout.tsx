@@ -1,27 +1,20 @@
 import type { Metadata } from 'next'
-import { Space_Grotesk, Inter } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 import PageTransition from '@/components/ui/PageTransition'
 import { AudioProvider } from '@/context/AudioContext'
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-space-grotesk',
-  display: 'swap',
-})
-
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
   variable: '--font-inter',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
-  title: 'Rohan: Builder',
+  title: 'Rohan | Builder',
   description:
-    'I build things that are taking shape. Experiments, ideas, and work in progress.',
+    "I build things. Some are experiments, some are just ideas, but they're all work in progress.",
 }
 
 export default function RootLayout({
@@ -30,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
+    <html lang="en" className={`${inter.variable}`}>
       <body className="bg-paper text-ink font-body antialiased overflow-x-hidden">
         {/* Global grain: one texture across the entire page, no per-section noise */}
         <svg

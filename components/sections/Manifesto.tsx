@@ -4,23 +4,23 @@ import { motion } from 'framer-motion'
 
 const paragraphs = [
   {
-    text: 'Most people wait until they know enough to start.',
+    text: "Most people wait until they're ready to start.",
     style: 'large-light',
   },
   {
-    text: 'I start to find out what I know.',
+    text: "I start to find out how to be ready.",
     style: 'large-accent',
   },
   {
-    text: "There's a difference between making something look good and making something that actually works. I care about the second one.",
+    text: "There's a gap between making something look good and making it actually work. I live in that gap.",
     style: 'medium-muted',
   },
   {
-    text: 'The most interesting work lives at the edges : where a technical problem becomes a design choice, where a simple question turns into a product.',
+    text: 'Interesting things happen at the boundaries: where code meets design, and where questions become products.',
     style: 'medium-muted',
   },
   {
-    text: 'That is where I work.',
+    text: "That's my workspace.",
     style: 'medium-light',
   },
 ]

@@ -26,7 +26,7 @@ interface Ripple {
   y: number
 }
 
-const headingLines = ["I build", "things that", "are taking shape."]
+const headingLines = ["I build", "things that", "feel real."]
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null)
@@ -326,7 +326,7 @@ export default function Hero() {
                 transition={{ type: 'spring', stiffness: 120, damping: 18 }}
                 className="font-body text-lg md:text-xl text-ink/60 max-w-sm leading-relaxed mb-10"
               >
-                I test ideas, see what works, and build the ones worth building.
+                I test ideas, keep what works, and build what's next.
               </motion.p>
             </motion.div>
 

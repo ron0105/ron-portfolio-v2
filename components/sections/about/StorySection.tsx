@@ -7,24 +7,24 @@ const blocks = [
     label: 'How I got here',
     content: [
       "I didn't start as a developer. I started as someone who kept having ideas and couldn't find anyone to build them.",
-      "So I figured it out myself. First design. Then code. Then how to put both together in a way that felt obvious once you saw it.",
-      "I've built apps, websites, tools, and experiments. Most of them for myself. A few worked. All of them taught me something.",
+      "So I just started doing it myself. First design, then code, then figuring out how to make both feel so easy you don't even notice them.",
+      "I've built apps, websites, and experiments. Most were just for me. A few actually worked. All of them taught me something.",
     ],
   },
   {
     label: 'How I think',
     content: [
-      "I try things instead of planning forever. I write things down. I change my mind when I learn something new : which is often.",
-      "The best way to understand something is to build a version of it. Even a bad version. Especially a bad version.",
-      "I don't separate design from building. To me, choosing how something looks is the same act as choosing how it works.",
+      "I'd rather try something once than plan it for a month. I write things down, and I change my mind as soon as I learn something new.",
+      "The best way to understand something is to build it. Even a messy version. Especially a messy version.",
+      "I don't separate design from building. To me, how it looks and how it works are parts of the same conversation.",
     ],
   },
   {
     label: 'What drives me',
     content: [
-      "I want to build things that feel like they should already exist. Stuff that makes people think: why didn't someone make this sooner?",
-      "I'm drawn to problems that look simple but aren't. The kind where most solutions add complexity instead of removing it.",
-      "I build in public because the learning is as useful as the result : for me, and hopefully for someone else too.",
+      "I want to build things that feel like they should have existed all along. The kind of stuff that makes you think: why wasn't this already here?",
+      "I'm drawn to problems that look simple but aren't. Most solutions add complexity; I'd rather remove it.",
+      "I build in public because the process is just as interesting as the result, both for me and, hopefully, for you too.",
     ],
   },
 ]
