@@ -153,10 +153,10 @@ export default function Thinking() {
           className="mb-20"
         >
           <span className="font-body text-xs text-muted uppercase tracking-widest block mb-4">
-            Think
+            Recent
           </span>
           <h2 className="font-heading text-5xl md:text-7xl font-bold text-ink leading-none">
-            How I think<span className="text-accent">.</span>
+            Some thoughts<span className="text-accent">.</span>
           </h2>
         </motion.div>
 
