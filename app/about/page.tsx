@@ -5,7 +5,7 @@ import PrinciplesSection from '@/components/sections/about/PrinciplesSection'
 import Footer from '@/components/sections/Footer'
 
 export const metadata = {
-  title: 'About — Rohan',
+  title: 'About : Rohan',
   description: "I build things before I fully know how. Here's who I am and what I care about.",
 }
 

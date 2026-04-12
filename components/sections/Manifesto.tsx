@@ -16,7 +16,7 @@ const paragraphs = [
     style: 'medium-muted',
   },
   {
-    text: 'The most interesting work lives at the edges — where a technical problem becomes a design choice, where a simple question turns into a product.',
+    text: 'The most interesting work lives at the edges : where a technical problem becomes a design choice, where a simple question turns into a product.',
     style: 'medium-muted',
   },
   {

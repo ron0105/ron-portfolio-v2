@@ -79,7 +79,7 @@ export default function HeroVisual() {
   const smX = useSpring(rawX, cfg)
   const smY = useSpring(rawY, cfg)
 
-  /* three parallax layers — slow / medium / fast */
+  /* three parallax layers : slow / medium / fast */
   const p1x = useTransform(smX, [-0.5, 0.5], [-5,   5])
   const p1y = useTransform(smY, [-0.5, 0.5], [-5,   5])
   const p2x = useTransform(smX, [-0.5, 0.5], [-13, 13])
@@ -125,7 +125,7 @@ export default function HeroVisual() {
           willChange: 'transform',
         }}
       >
-        {/* Outer ring — very flat horizontal orbit */}
+        {/* Outer ring : very flat horizontal orbit */}
         <Ring
           size={360}
           rotateX={66}
@@ -135,7 +135,7 @@ export default function HeroVisual() {
           borderColor="rgba(13,13,13,0.07)"
         />
 
-        {/* Middle ring — slight oblique angle */}
+        {/* Middle ring : slight oblique angle */}
         <Ring
           size={240}
           rotateX={50}
@@ -147,7 +147,7 @@ export default function HeroVisual() {
           borderColor="rgba(13,13,13,0.11)"
         />
 
-        {/* Inner ring — accent tinted */}
+        {/* Inner ring : accent tinted */}
         <Ring
           size={138}
           rotateX={30}

@@ -32,8 +32,7 @@ export default function PersonalStrip() {
             </p>
             <p className="font-body text-base md:text-lg text-muted/80 leading-relaxed max-w-lg">
               Most of my work starts as an idea and ends as a real experiment.
-              I&apos;m not waiting for permission — I&apos;m figuring it out in
-              public.
+              I take initiative. I build and learn in the open.
             </p>
           </motion.div>
 

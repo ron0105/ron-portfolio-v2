@@ -4,7 +4,7 @@ import PostList from '@/components/sections/thinking/PostList'
 import Footer from '@/components/sections/Footer'
 
 export const metadata = {
-  title: 'Thinking — Rohan',
+  title: 'Thinking : Rohan',
   description: 'Short ideas and notes from building things.',
 }
 

@@ -43,7 +43,7 @@ function ProjectCard({
       transition={{ duration: 0.3, delay: index * 0.05, ease: 'easeOut' }}
       className={`border border-border transition-colors duration-200 ${open ? 'border-ink/20' : 'hover:border-ink/20'}`}
     >
-      {/* Card header — always visible, always clickable */}
+      {/* Card header : always visible, always clickable */}
       <button
         onClick={() => setOpen((v) => !v)}
         className="w-full text-left p-7 md:p-8 cursor-pointer group"

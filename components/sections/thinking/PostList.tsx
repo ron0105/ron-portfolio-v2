@@ -21,7 +21,7 @@ function PostEntry({
       transition={{ duration: 0.3, delay: index * 0.06, ease: 'easeOut' }}
       className="border-b border-border"
     >
-      {/* Collapsed row — always visible */}
+      {/* Collapsed row : always visible */}
       <button
         onClick={() => setOpen((v) => !v)}
         className="w-full text-left py-8 group cursor-pointer"
@@ -44,7 +44,7 @@ function PostEntry({
             >
               {post.title}
             </h2>
-            {/* Preview excerpt — only when collapsed */}
+            {/* Preview excerpt : only when collapsed */}
             <AnimatePresence>
               {!open && (
                 <motion.p

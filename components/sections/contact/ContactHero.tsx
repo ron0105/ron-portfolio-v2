@@ -52,7 +52,7 @@ export default function ContactHero() {
           className="font-body text-xl md:text-2xl text-ink/60 max-w-2xl leading-relaxed mb-24"
         >
           Whether you have an idea, want to work together, or just want to think
-          out loud — I read everything and reply to most things.
+          out loud : I read everything and reply to most things.
         </motion.p>
 
         {/* Contact options */}

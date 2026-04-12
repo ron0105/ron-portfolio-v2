@@ -3,7 +3,7 @@
 import { useRef, useEffect } from 'react'
 
 /* ─────────────────────────────────────────────
-   Vertex shader — positions a fullscreen quad
+   Vertex shader : positions a fullscreen quad
 ───────────────────────────────────────────── */
 const VERT = `
 attribute vec2 a_pos;
@@ -13,15 +13,15 @@ void main() {
 `
 
 /* ─────────────────────────────────────────────
-   Fragment shader — domain-warped FBM
+   Fragment shader : domain-warped FBM
 
    Three modes driven by u_focus (0 → 1):
    · Idle   (0): soft, organic, clearly visible flow
-   · Focused (1): flow tightens — warp reduces, contrast
+   · Focused (1): flow tightens : warp reduces, contrast
                   increases slightly (structure emerging)
 
    u_mouse: creates a visible pressure/push field
-   around the cursor — radius is intentionally large.
+   around the cursor : radius is intentionally large.
 ───────────────────────────────────────────── */
 const FRAG = `
 precision mediump float;
@@ -71,7 +71,7 @@ void main() {
   float md  = length(toM);
   vec2  mf  = toM * 0.9 * exp(-md * 1.5);
 
-  /* ── Domain warp — less on focus (flow tightens) ─────────
+  /* ── Domain warp : less on focus (flow tightens) ─────────
      idle: warp = 1.80 → chaotic, organic
      focus: warp = 0.75 → structured, intentional           */
   float warp = mix(1.80, 0.75, u_focus);
@@ -102,7 +102,7 @@ void main() {
 
 /* ─────────────────────────────────────────────
    ShaderCanvas
-   Accepts an optional focusRef — a plain object
+   Accepts an optional focusRef : a plain object
    ref whose .current is lerped toward each frame.
    Zero React re-renders, zero event overhead.
 ───────────────────────────────────────────── */
@@ -154,7 +154,7 @@ export default function ShaderCanvas({
     let mx = 0.5, my = 0.5
     let tx = 0.5, ty = 0.5
 
-    /* Focus lerped smoothly — 0.055 ≈ 0.8s settle */
+    /* Focus lerped smoothly : 0.055 ≈ 0.8s settle */
     let focusCurrent = 0
 
     const onMouse = (e: MouseEvent) => {

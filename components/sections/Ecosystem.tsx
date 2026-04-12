@@ -16,7 +16,7 @@ import { experiments } from '@/lib/data'
 ───────────────────────────────────────────── */
 const RADIUS  = 195   // orbit radius px
 const SIZE    = 540   // container px
-const SPEED   = 4.5   // degrees / second — slow, premium
+const SPEED   = 4.5   // degrees / second : slow, premium
 const D2R     = Math.PI / 180
 
 const SHORT: Record<string, string> = {
@@ -35,7 +35,7 @@ const DOT_COLOR: Record<string, string> = {
 type Exp = (typeof experiments)[0]
 
 /* ─────────────────────────────────────────────
-   OrbitalNode — 44px clickable circle
+   OrbitalNode : 44px clickable circle
    Position derived from globalAngle MotionValue
    → zero React re-renders per frame
 ───────────────────────────────────────────── */
@@ -56,7 +56,7 @@ function OrbitalNode({
   const y = useTransform(globalAngle, (a) =>
     Math.sin((base + a) * D2R) * RADIUS)
 
-  /* 3D depth illusion — from 21st.dev Radial Orbital Timeline
+  /* 3D depth illusion : from 21st.dev Radial Orbital Timeline
      sin = 1 at bottom (front) → full opacity
      sin = -1 at top  (back)  → 40% opacity */
   const depth = useTransform(globalAngle, (a) =>
@@ -84,7 +84,7 @@ function OrbitalNode({
         style={{ opacity: anyHovering ? 1 : depth }}
       >
 
-        {/* ── Node circle — 44×44 ── */}
+        {/* ── Node circle : 44×44 ── */}
         <motion.div
           className="relative flex items-center justify-center"
           animate={{
@@ -112,7 +112,7 @@ function OrbitalNode({
             transition={{ duration: 0.22 }}
           />
 
-          {/* Status dot — top-right corner */}
+          {/* Status dot : top-right corner */}
           <div
             className="absolute top-0.5 right-0.5 w-2 h-2 rounded-full border border-paper"
             style={{ backgroundColor: DOT_COLOR[data.status] }}
@@ -146,7 +146,7 @@ function OrbitalNode({
           </AnimatePresence>
         </motion.div>
 
-        {/* ── Project name — always visible below node ── */}
+        {/* ── Project name : always visible below node ── */}
         <motion.span
           className="font-body uppercase tracking-widest whitespace-nowrap pointer-events-none select-none"
           animate={{
@@ -167,7 +167,7 @@ function OrbitalNode({
 /* ─────────────────────────────────────────────
    Ecosystem section
 ───────────────────────────────────────────── */
-/* Stable base angles — computed once from experiments array order.
+/* Stable base angles : computed once from experiments array order.
    Both OrbitalNode positioning AND onSelect rotation use this same source. */
 const BASE_ANGLES: Record<string, number> = Object.fromEntries(
   experiments.map((exp, i) => [exp.id, (i / experiments.length) * 360])
@@ -181,7 +181,7 @@ export default function Ecosystem() {
   const displayId   = hoveredId ?? activeId
   const displayData = experiments.find((e) => e.id === displayId) ?? null
 
-  /* Single angle drives all nodes — zero re-renders during orbit */
+  /* Single angle drives all nodes : zero re-renders during orbit */
   const globalAngle  = useMotionValue(0)
   const targetAngle  = useRef(0)
 
@@ -294,7 +294,7 @@ export default function Ecosystem() {
             ))}
           </div>
 
-          {/* ── Detail panel — always shows, clearly visible ── */}
+          {/* ── Detail panel : always shows, clearly visible ── */}
           <AnimatePresence mode="wait">
             {displayData && (
               <motion.div

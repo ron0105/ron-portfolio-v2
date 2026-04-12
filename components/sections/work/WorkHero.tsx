@@ -30,7 +30,7 @@ export default function WorkHero() {
           transition={{ duration: 0.35, ease: 'easeOut', delay: 0.15 }}
           className="font-body text-xl md:text-2xl text-ink/60 max-w-2xl leading-relaxed mt-10"
         >
-          Not just what I built — but why I built it, what actually happened, and what I took away.
+          Not just what I built : but why I built it, what actually happened, and what I took away.
         </motion.p>
       </div>
     </section>

@@ -21,7 +21,7 @@ export default function CurrentlyExploring() {
             Currently building:
           </span>
           <span className="font-body text-sm text-ink font-medium">
-            The Adda Labs — a system for testing ideas before committing to them
+            The Adda Labs : a system for testing ideas before committing to them
           </span>
         </motion.div>
       </div>

@@ -92,13 +92,13 @@ export const thinking = [
   {
     id: '02',
     title: 'I had too many ideas. So I built a system for them.',
-    excerpt: "I've always had ideas. Most of them stayed in my head. Nothing really got built.",
+    excerpt: "I've always had ideas. I wanted to see more of them become reality.",
     date: 'Feb 2026',
     readTime: '2 min',
     paragraphs: [
       "I've always had ideas.",
       "Creative ones. Business ideas. Product ideas. Most stayed in my head for a while.",
-      "I would think about them, maybe talk about them, and then move on to the next one.",
+      "I would think about them, share them, and then begin the next journey.",
       "I wanted to see them become real.",
       "The goal was to add more structure.",
       "So I decided to treat ideas with more intention.",

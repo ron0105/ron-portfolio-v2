@@ -14,7 +14,7 @@ const blocks = [
   {
     label: 'How I think',
     content: [
-      "I try things instead of planning forever. I write things down. I change my mind when I learn something new — which is often.",
+      "I try things instead of planning forever. I write things down. I change my mind when I learn something new : which is often.",
       "The best way to understand something is to build a version of it. Even a bad version. Especially a bad version.",
       "I don't separate design from building. To me, choosing how something looks is the same act as choosing how it works.",
     ],
@@ -24,7 +24,7 @@ const blocks = [
     content: [
       "I want to build things that feel like they should already exist. Stuff that makes people think: why didn't someone make this sooner?",
       "I'm drawn to problems that look simple but aren't. The kind where most solutions add complexity instead of removing it.",
-      "I build in public because the learning is as useful as the result — for me, and hopefully for someone else too.",
+      "I build in public because the learning is as useful as the result : for me, and hopefully for someone else too.",
     ],
   },
 ]

@@ -68,7 +68,7 @@ export default function Hero() {
 
   const headingX = useTransform(px, (v) => v * -0.12)
 
-  /* Face parallax — smaller coefficient: slow, heavy, barely drifts */
+  /* Face parallax : smaller coefficient: slow, heavy, barely drifts */
   const faceX = useTransform(px, (v) => v * 0.22)
   const faceY = useTransform(py, (v) => v * 0.15)
 
@@ -167,12 +167,12 @@ export default function Hero() {
       className="relative overflow-hidden min-h-screen flex flex-col bg-paper"
     >
 
-      {/* ── 1: Shader — organic flowing background ── */}
+      {/* ── 1: Shader : organic flowing background ── */}
       <div className="absolute inset-0">
         <ShaderCanvas className="w-full h-full" focusRef={shaderFocusRef} />
       </div>
 
-      {/* ── 3: Vignette — edges pull focus inward ── */}
+      {/* ── 3: Vignette : edges pull focus inward ── */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -279,7 +279,7 @@ export default function Hero() {
               </span>
             </motion.div>
 
-            {/* Heading — parallax + lift + scroll scale + scroll filter */}
+            {/* Heading : parallax + lift + scroll scale + scroll filter */}
             <motion.div
               className="mb-10"
               style={{
@@ -330,7 +330,7 @@ export default function Hero() {
               </motion.p>
             </motion.div>
 
-            {/* CTAs — also trigger the focus state */}
+            {/* CTAs : also trigger the focus state */}
             <motion.div
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
@@ -385,7 +385,7 @@ export default function Hero() {
       </div>
 
 
-      {/* Shader bottom bleed — dissolves organic texture into page, not a visible gradient band */}
+      {/* Shader bottom bleed : dissolves organic texture into page, not a visible gradient band */}
       <div
         className="absolute bottom-0 left-0 right-0 pointer-events-none z-10"
         style={{

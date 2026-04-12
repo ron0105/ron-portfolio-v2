@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
   "organic → structured" interaction system
   ──────────────────────────────────────────
   Default: text is slightly loose + soft (letterSpacing 0.01em, opacity 0.92).
-  On mouse entry: a spring settles everything into place — text tightens,
+  On mouse entry: a spring settles everything into place : text tightens,
   sharpens, heading lifts slightly, accent dot pulses once, grid appears.
 */
 
@@ -25,7 +25,7 @@ export default function AboutHero() {
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
     >
-      {/* Grid — structure emerging on interaction */}
+      {/* Grid : structure emerging on interaction */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
           className="w-full h-full"
@@ -52,7 +52,7 @@ export default function AboutHero() {
           About
         </motion.span>
 
-        {/* Heading — entrance wrapper separates from interactive state */}
+        {/* Heading : entrance wrapper separates from interactive state */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ export default function AboutHero() {
             className="font-heading font-bold text-[clamp(3rem,9vw,8rem)] leading-[1.0] text-ink"
           >
             Hi, I&apos;m Rohan
-            {/* Accent dot — pulses once on focus, anchors the heading */}
+            {/* Accent dot : pulses once on focus, anchors the heading */}
             <motion.span
               className="text-accent"
               animate={{ scale: isFocused ? [1, 1.2, 1] : 1 }}
@@ -93,7 +93,7 @@ export default function AboutHero() {
             className="font-body text-xl md:text-2xl text-ink/60 max-w-2xl leading-relaxed mt-10"
           >
             I sit at the overlap of business, design, and technology.
-            I don&apos;t wait until I know everything — I start, and figure it out.
+            I begin where most wait. I start, and find the way.
           </motion.p>
         </motion.div>
       </div>
