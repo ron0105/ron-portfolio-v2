@@ -235,10 +235,10 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* 5b: Face — mobile: full-width, absolute behind content, dissolves at bottom */}
+      {/* 5b: Face — mobile: starts BELOW nav so hair is fully visible */}
       <motion.div
-        className="absolute top-0 left-0 right-0 block md:hidden pointer-events-none"
-        style={{ height: '70vh', opacity: scrollFade, zIndex: 1 }}
+        className="absolute left-0 right-0 block md:hidden pointer-events-none"
+        style={{ top: '4rem', height: '76vh', opacity: scrollFade, zIndex: 1 }}
       >
         <Image
           src="/roro.png"
@@ -247,17 +247,17 @@ export default function Hero() {
           sizes="100vw"
           className="object-cover"
           style={{
-            objectPosition: '50% 8%',
+            objectPosition: '50% 2%',
             filter: 'contrast(1.06) brightness(0.94)',
           }}
           priority
         />
-        {/* Bottom dissolve: sharp hair at top, clean paper by text zone */}
+        {/* Bottom dissolve: hair fully visible at top, clean paper before text */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(to bottom, transparent 0%, transparent 35%, rgba(247,246,243,0.2) 44%, rgba(247,246,243,0.65) 54%, rgba(247,246,243,0.92) 64%, #F7F6F3 72%)',
+              'linear-gradient(to bottom, transparent 0%, transparent 42%, rgba(247,246,243,0.2) 52%, rgba(247,246,243,0.7) 62%, rgba(247,246,243,0.95) 70%, #F7F6F3 76%)',
           }}
         />
       </motion.div>
@@ -284,7 +284,7 @@ export default function Hero() {
       ))}
 
       {/* ── 7: Content ── */}
-      <div className="relative z-30 flex flex-col min-h-screen px-5 sm:px-6 pt-[46vh] sm:pt-28 pb-24 sm:pb-32">
+      <div className="relative z-30 flex flex-col min-h-screen px-5 sm:px-6 pt-[52vh] sm:pt-28 pb-24 sm:pb-32">
 
         <div className="max-w-6xl mx-auto w-full flex-1 flex items-center sm:items-center">
           <div className="flex flex-col justify-center w-full max-w-xl">
