@@ -279,6 +279,31 @@ export default function Hero() {
               </span>
             </motion.div>
 
+            {/* Mobile-only portrait — visible below md, replaced by full bleed on md+ */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.97 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.55, ease: 'easeOut', delay: 0.1 }}
+              className="block md:hidden mb-8 relative w-[68vw] max-w-[240px] aspect-square overflow-hidden self-start"
+              style={{
+                maskImage: 'linear-gradient(to bottom, black 55%, transparent 100%)',
+                WebkitMaskImage: 'linear-gradient(to bottom, black 55%, transparent 100%)',
+              }}
+            >
+              <Image
+                src="/roro.png"
+                alt="Rohan"
+                fill
+                sizes="68vw"
+                className="object-cover"
+                style={{
+                  objectPosition: '50% 8%',
+                  filter: 'contrast(1.06) brightness(0.96)',
+                }}
+                priority
+              />
+            </motion.div>
+
             {/* Heading : parallax + lift + scroll scale + scroll filter */}
             <motion.div
               className="mb-10"
