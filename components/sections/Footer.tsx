@@ -4,8 +4,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 const socials = [
-  { label: 'Twitter', href: 'https://x.com/buildwithron' },
-  { label: 'GitHub', href: '#' },
+  { label: 'GitHub', href: 'https://github.com/ron0105' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ronnnn/' },
   { label: 'Email', href: 'mailto:rohan0105@gmail.com' },
 ]

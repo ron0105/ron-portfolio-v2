@@ -10,10 +10,10 @@ const ways = [
     note: 'Best for longer conversations',
   },
   {
-    label: 'Twitter / X',
-    value: '@buildwithron',
-    href: 'https://x.com/buildwithron',
-    note: 'Good for quick messages',
+    label: 'GitHub',
+    value: 'github.com/ron0105',
+    href: 'https://github.com/ron0105',
+    note: 'See what I build',
   },
   {
     label: 'LinkedIn',
