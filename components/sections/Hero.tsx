@@ -181,6 +181,16 @@ export default function Hero() {
         }}
       />
 
+      {/* ── 3b: Top-edge guard — nav zone always reads on paper ── */}
+      <div
+        className="absolute top-0 left-0 right-0 pointer-events-none"
+        style={{
+          height: '18%',
+          background: 'linear-gradient(to bottom, rgba(247,246,243,0.78) 0%, rgba(247,246,243,0.4) 55%, transparent 100%)',
+          zIndex: 2,
+        }}
+      />
+
       {/* 4: Grid: structure emerging via scroll + hover */}
       <motion.div
         className="absolute inset-0 pointer-events-none"
@@ -252,12 +262,12 @@ export default function Hero() {
           }}
           priority
         />
-        {/* Bottom dissolve: photo melts into page background */}
+        {/* Bottom dissolve: photo melts into page background well before text zone */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(to bottom, transparent 0%, transparent 28%, rgba(247,246,243,0.3) 50%, rgba(247,246,243,0.75) 68%, #F7F6F3 84%)',
+              'linear-gradient(to bottom, transparent 0%, transparent 20%, rgba(247,246,243,0.25) 36%, rgba(247,246,243,0.65) 50%, rgba(247,246,243,0.9) 62%, #F7F6F3 72%)',
           }}
         />
       </motion.div>
