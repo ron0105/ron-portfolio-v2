@@ -89,15 +89,18 @@ export default function Nav() {
             </Link>
           </div>
 
-          {/* Mobile menu button — large 44px target */}
-          <button
-            className="md:hidden flex items-center justify-center min-h-[44px] min-w-[44px] font-body text-sm text-muted hover:text-ink transition-colors duration-200 cursor-pointer"
-            onClick={() => setMenuOpen((v) => !v)}
-            aria-label="Toggle menu"
-            aria-expanded={menuOpen}
-          >
-            {menuOpen ? 'Close' : 'Menu'}
-          </button>
+          {/* Mobile: audio icon + menu — always visible on every page */}
+          <div className="flex items-center gap-1 md:hidden">
+            <AudioTrigger iconOnly />
+            <button
+              className="flex items-center justify-center min-h-[44px] min-w-[44px] font-body text-sm text-muted hover:text-ink transition-colors duration-200 cursor-pointer"
+              onClick={() => setMenuOpen((v) => !v)}
+              aria-label="Toggle menu"
+              aria-expanded={menuOpen}
+            >
+              {menuOpen ? 'Close' : 'Menu'}
+            </button>
+          </div>
         </div>
       </motion.nav>
 
