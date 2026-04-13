@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import AudioTrigger from '@/components/ui/AudioTrigger'
 import { usePathname } from 'next/navigation'
@@ -23,6 +23,12 @@ export default function Nav() {
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [menuOpen])
 
   useEffect(() => {
     setMenuOpen(false)
@@ -83,45 +89,70 @@ export default function Nav() {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu button — large 44px target */}
           <button
-            className="md:hidden font-body text-sm text-muted hover:text-ink transition-colors duration-200 cursor-pointer"
+            className="md:hidden flex items-center justify-center min-h-[44px] min-w-[44px] font-body text-sm text-muted hover:text-ink transition-colors duration-200 cursor-pointer"
             onClick={() => setMenuOpen((v) => !v)}
             aria-label="Toggle menu"
+            aria-expanded={menuOpen}
           >
             {menuOpen ? 'Close' : 'Menu'}
           </button>
         </div>
       </motion.nav>
 
-      {/* Mobile menu */}
-      {menuOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -8 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -8 }}
-          transition={{ duration: 0.2 }}
-          className="fixed inset-0 z-40 bg-paper pt-24 px-6 md:hidden"
-        >
-          <ul className="flex flex-col gap-8">
-            {links.map((link) => {
-              const isActive = pathname === link.href
-              return (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className={`font-heading text-4xl font-semibold transition-colors duration-200 cursor-pointer ${
-                      isActive ? 'text-accent' : 'text-ink hover:text-accent'
-                    }`}
+      {/* Mobile menu overlay — full-screen, includes audio + CTA */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.22, ease: 'easeOut' }}
+            className="fixed inset-0 z-40 bg-paper flex flex-col pt-24 px-6 pb-10 md:hidden overflow-y-auto"
+          >
+            {/* Nav links */}
+            <ul className="flex flex-col gap-2 flex-1">
+              {links.map((link, i) => {
+                const isActive = pathname === link.href
+                return (
+                  <motion.li
+                    key={link.label}
+                    initial={{ opacity: 0, x: -12 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.2, delay: i * 0.05 }}
                   >
-                    {link.label}
-                  </Link>
-                </li>
-              )
-            })}
-          </ul>
-        </motion.div>
-      )}
+                    <Link
+                      href={link.href}
+                      className={`font-heading text-4xl font-semibold transition-colors duration-200 block py-3 ${
+                        isActive ? 'text-accent' : 'text-ink hover:text-accent'
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.li>
+                )
+              })}
+            </ul>
+
+            {/* Bottom section: audio + CTA */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.25 }}
+              className="mt-10 pt-8 border-t border-border flex flex-col gap-5"
+            >
+              <AudioTrigger className="text-sm" />
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center bg-ink text-paper text-sm font-bold tracking-widest uppercase px-6 py-4 hover:bg-accent transition-colors duration-300 w-full"
+              >
+                Let&apos;s Talk
+              </Link>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   )
 }

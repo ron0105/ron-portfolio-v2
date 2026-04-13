@@ -36,25 +36,25 @@ const lineVariants = {
 
 const styleMap: Record<string, string> = {
   'large-light':
-    'font-heading text-3xl md:text-5xl font-light text-paper/75 leading-snug',
+    'font-heading text-2xl sm:text-3xl md:text-5xl font-light text-paper/75 leading-snug',
   'large-accent':
-    'font-heading text-4xl md:text-6xl font-bold text-accent leading-snug',
+    'font-heading text-3xl sm:text-4xl md:text-6xl font-bold text-accent leading-snug',
   'medium-muted':
-    'font-body text-xl md:text-2xl font-normal text-paper/50 leading-relaxed max-w-2xl',
+    'font-body text-lg sm:text-xl md:text-2xl font-normal text-paper/50 leading-relaxed max-w-2xl',
   'medium-light':
-    'font-heading text-2xl md:text-4xl font-semibold text-paper leading-snug',
+    'font-heading text-xl sm:text-2xl md:text-4xl font-semibold text-paper leading-snug',
 }
 
 export default function Manifesto() {
   return (
-    <section className="bg-ink py-36 px-6">
+    <section className="bg-ink py-20 sm:py-36 px-5 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <motion.span
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.3 }}
-          className="font-body text-xs text-paper/25 uppercase tracking-widest block mb-20"
+          className="font-body text-xs text-paper/25 uppercase tracking-widest block mb-12 sm:mb-20"
         >
           Believe
         </motion.span>
@@ -64,7 +64,7 @@ export default function Manifesto() {
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
           transition={{ staggerChildren: 0.08 }}
-          className="space-y-12"
+          className="space-y-8 sm:space-y-12"
         >
           {paragraphs.map((para, i) => (
             <motion.p

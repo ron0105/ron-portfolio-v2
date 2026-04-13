@@ -27,7 +27,7 @@ function ThinkingRow({
         className="group w-full text-left border-b border-border transition-colors duration-200 cursor-pointer"
         style={{ borderColor: isOpen ? 'rgba(13,13,13,0.2)' : '' }}
       >
-        <div className="flex items-start justify-between gap-6 py-9 px-0">
+        <div className="flex items-start justify-between gap-4 py-6 sm:py-9 px-0">
 
           {/* Left content */}
           <div className="flex-1 min-w-0">
@@ -72,9 +72,9 @@ function ThinkingRow({
           </div>
 
           {/* Right: meta + toggle */}
-          <div className="flex flex-col items-end gap-2 shrink-0 pt-8">
-            <span className="font-body text-xs text-muted/50">{post.date}</span>
-            <span className="font-body text-xs text-muted/50">{post.readTime}</span>
+          <div className="flex flex-col items-end gap-2 shrink-0 pt-6 sm:pt-8">
+            <span className="font-body text-xs text-muted/50 hidden sm:block">{post.date}</span>
+            <span className="font-body text-xs text-muted/50 hidden sm:block">{post.readTime}</span>
 
             {/* Plus / X: clearly sized, accent-colored when open */}
             <motion.div
@@ -142,7 +142,7 @@ export default function Thinking() {
   const toggle  = (id: string) => setOpenId((p) => (p === id ? null : id))
 
   return (
-    <section id="thinking" className="py-36 px-6 bg-paper">
+    <section id="thinking" className="py-20 sm:py-36 px-5 sm:px-6 bg-paper">
       <div className="max-w-6xl mx-auto">
 
         <motion.div
@@ -155,7 +155,7 @@ export default function Thinking() {
           <span className="font-body text-xs text-muted uppercase tracking-widest block mb-4">
             Recent
           </span>
-          <h2 className="font-heading text-5xl md:text-7xl font-bold text-ink leading-none">
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-7xl font-bold text-ink leading-none">
             Some thoughts<span className="text-accent">.</span>
           </h2>
         </motion.div>

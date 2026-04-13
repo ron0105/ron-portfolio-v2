@@ -31,9 +31,9 @@ const blocks = [
 
 export default function StorySection() {
   return (
-    <section className="py-28 px-6 bg-paper border-t border-border">
+    <section className="py-20 sm:py-28 px-5 sm:px-6 bg-paper border-t border-border">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20">
           {blocks.map((block, blockIndex) => (
             <motion.div
               key={block.label}

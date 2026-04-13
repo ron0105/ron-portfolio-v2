@@ -259,22 +259,22 @@ export default function Hero() {
       ))}
 
       {/* ── 7: Content ── */}
-      <div className="relative z-30 flex flex-col min-h-screen px-6 pt-28 pb-32">
+      <div className="relative z-30 flex flex-col min-h-screen px-5 sm:px-6 pt-20 sm:pt-28 pb-24 sm:pb-32">
         <div className="max-w-6xl mx-auto w-full flex-1 flex items-center">
-          <div className="flex flex-col justify-center max-w-xl">
+          <div className="flex flex-col justify-center w-full max-w-xl">
 
             {/* Live badge */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4 }}
-              className="flex items-center gap-2.5 mb-14"
+              className="flex items-center gap-2.5 mb-8 sm:mb-14"
             >
-              <span className="relative flex h-2 w-2">
+              <span className="relative flex h-2 w-2 shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-60" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
               </span>
-              <span className="font-body text-xs text-muted tracking-widest uppercase">
+              <span className="font-body text-[10px] sm:text-xs text-muted tracking-widest uppercase">
                 Currently building: The Adda Labs
               </span>
             </motion.div>
@@ -307,7 +307,7 @@ export default function Hero() {
                         y: isFocused ? -2 : 0,
                       }}
                       transition={{ type: 'spring', stiffness: 120, damping: 18 }}
-                      className="font-heading font-bold text-[clamp(2.5rem,8vw,6.5rem)] leading-[1.02] tracking-tight text-ink"
+                      className="font-heading font-bold text-[clamp(2.8rem,10vw,6.5rem)] leading-[1.02] tracking-tight text-ink"
                     >
                     {line}
                   </motion.h1>
@@ -324,7 +324,7 @@ export default function Hero() {
               <motion.p
                 animate={{ opacity: isFocused ? 1 : 0.92 }}
                 transition={{ type: 'spring', stiffness: 120, damping: 18 }}
-                className="font-body text-lg md:text-xl text-ink/60 max-w-sm leading-relaxed mb-10"
+                className="font-body text-base sm:text-lg md:text-xl text-ink/60 max-w-sm leading-relaxed mb-8 sm:mb-10"
               >
                 I test ideas, keep what works, and build what's next.
               </motion.p>
@@ -335,13 +335,13 @@ export default function Hero() {
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35, ease: 'easeOut', delay: 0.44 }}
-              className="flex flex-wrap items-center gap-4"
+              className="flex flex-wrap items-center gap-3 sm:gap-4"
               onMouseEnter={handleHoverStart}
               onMouseLeave={handleHoverEnd}
             >
               <Link
                 href="/work"
-                className="inline-flex items-center gap-2 bg-ink text-paper font-body text-sm font-medium px-7 py-4 hover:bg-accent transition-colors duration-200"
+                className="inline-flex items-center gap-2 bg-ink text-paper font-body text-sm font-medium px-6 py-3.5 sm:px-7 sm:py-4 hover:bg-accent transition-colors duration-200"
               >
                 See the work →
               </Link>
@@ -358,9 +358,9 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="mt-8"
+              className="mt-6 sm:mt-8"
             >
-              <AudioTrigger />
+              <AudioTrigger className="py-2" />
             </motion.div>
 
           </div>

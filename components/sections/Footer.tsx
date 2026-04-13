@@ -12,19 +12,19 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-ink py-28 px-6">
+    <footer className="bg-ink py-16 sm:py-28 px-5 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
-          className="flex flex-col md:flex-row items-start md:items-end justify-between gap-16"
+          className="flex flex-col md:flex-row items-start md:items-end justify-between gap-10 sm:gap-16"
         >
           {/* CTA */}
           <div>
             <Link href="/contact">
-              <p className="font-heading text-5xl md:text-7xl font-bold text-paper mb-4 leading-none hover:text-accent transition-colors duration-200 cursor-pointer">
+              <p className="font-heading text-4xl sm:text-5xl md:text-7xl font-bold text-paper mb-4 leading-none hover:text-accent transition-colors duration-200 cursor-pointer">
                 Let&apos;s talk<span className="text-accent">.</span>
               </p>
             </Link>
@@ -54,7 +54,7 @@ export default function Footer() {
         </motion.div>
 
         {/* Bottom bar */}
-        <div className="mt-24 pt-8 border-t border-paper/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div className="mt-12 sm:mt-24 pt-8 border-t border-paper/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <span className="font-heading font-bold text-paper/20 text-sm tracking-[0.2em] uppercase">
             Rohan
           </span>

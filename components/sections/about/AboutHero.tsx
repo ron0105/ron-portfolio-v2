@@ -21,7 +21,7 @@ export default function AboutHero() {
 
   return (
     <section
-      className="relative min-h-[65vh] flex flex-col justify-end px-6 pt-40 pb-24 bg-paper overflow-hidden"
+      className="relative min-h-[55vh] sm:min-h-[65vh] flex flex-col justify-end px-5 sm:px-6 pt-28 sm:pt-40 pb-16 sm:pb-24 bg-paper overflow-hidden"
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
     >

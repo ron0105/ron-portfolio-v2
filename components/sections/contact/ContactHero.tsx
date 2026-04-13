@@ -25,7 +25,7 @@ const ways = [
 
 export default function ContactHero() {
   return (
-    <section className="min-h-screen flex flex-col px-6 pt-40 pb-28 bg-paper">
+    <section className="flex flex-col px-5 sm:px-6 pt-28 sm:pt-40 pb-16 sm:pb-28 bg-paper">
       <div className="max-w-6xl mx-auto w-full">
         <motion.span
           initial={{ opacity: 0 }}
@@ -49,10 +49,10 @@ export default function ContactHero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.35, ease: 'easeOut', delay: 0.15 }}
-          className="font-body text-xl md:text-2xl text-ink/60 max-w-2xl leading-relaxed mb-24"
+          className="font-body text-lg sm:text-xl md:text-2xl text-ink/60 max-w-2xl leading-relaxed mb-14 sm:mb-24"
         >
           Whether you have an idea, want to work together, or just want to think
-          out loud : I read everything and reply to most things.
+          out loud. I read everything and reply to most things.
         </motion.p>
 
         {/* Contact options */}
@@ -66,13 +66,13 @@ export default function ContactHero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3, delay: 0.2 + i * 0.06 }}
-              className="group flex items-center justify-between border-b border-border py-10 hover:pl-3 transition-all duration-200 cursor-pointer"
+              className="group flex items-center justify-between border-b border-border py-7 sm:py-10 hover:pl-3 transition-all duration-200 cursor-pointer"
             >
               <div>
                 <span className="font-body text-xs text-muted uppercase tracking-widest block mb-2">
                   {way.label}
                 </span>
-                <span className="font-heading text-2xl md:text-3xl font-semibold text-ink group-hover:text-accent transition-colors duration-200">
+                <span className="font-heading text-xl sm:text-2xl md:text-3xl font-semibold text-ink group-hover:text-accent transition-colors duration-200 break-all sm:break-normal">
                   {way.value}
                 </span>
               </div>
