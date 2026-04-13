@@ -198,7 +198,7 @@ export default function Hero() {
         }}
       />
 
-      {/* 5: Face: horizontal dissolve only, no vertical fades */}
+      {/* 5a: Face — desktop: right half, side-dissolve */}
       <motion.div
         className="absolute right-0 top-0 bottom-0 w-[52%] hidden md:block pointer-events-none"
         style={{
@@ -209,9 +209,7 @@ export default function Hero() {
           WebkitMaskComposite: 'source-in',
         }}
       >
-        {/* Parallax drift */}
         <motion.div className="absolute inset-0" style={{ x: faceX, y: faceY }}>
-          {/* Focus lift */}
           <motion.div
             className="absolute inset-0"
             animate={{
@@ -237,6 +235,33 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
+      {/* 5b: Face — mobile: full-width, absolute behind content, dissolves at bottom */}
+      <motion.div
+        className="absolute top-0 left-0 right-0 block md:hidden pointer-events-none"
+        style={{ height: '70vh', opacity: scrollFade, zIndex: 1 }}
+      >
+        <Image
+          src="/roro.png"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
+          style={{
+            objectPosition: '50% 8%',
+            filter: 'contrast(1.06) brightness(0.94)',
+          }}
+          priority
+        />
+        {/* Bottom dissolve: photo melts into page background */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(to bottom, transparent 0%, transparent 28%, rgba(247,246,243,0.3) 50%, rgba(247,246,243,0.75) 68%, #F7F6F3 84%)',
+          }}
+        />
+      </motion.div>
+
       {/* ── 6: Click ripples ── */}
       {ripples.map((rp) => (
         <motion.div
@@ -259,44 +284,9 @@ export default function Hero() {
       ))}
 
       {/* ── 7: Content ── */}
-      <div className="relative z-30 flex flex-col min-h-screen px-5 sm:px-6 pt-20 sm:pt-28 pb-24 sm:pb-32">
-        {/* Mobile-only full-bleed portrait — breaks out of horizontal padding */}
-        <motion.div
-          className="block md:hidden -mx-5 sm:-mx-6 mb-10 relative overflow-hidden"
-          style={{ aspectRatio: '4/5' }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7, ease: 'easeOut' }}
-        >
-          <Image
-            src="/roro.png"
-            alt="Rohan"
-            fill
-            sizes="100vw"
-            className="object-cover"
-            style={{
-              objectPosition: '50% 10%',
-              filter: 'contrast(1.06) brightness(0.94)',
-            }}
-            priority
-          />
-          {/* Gradient dissolve into paper background */}
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background: 'linear-gradient(to bottom, transparent 30%, rgba(247,246,243,0.5) 65%, #F7F6F3 100%)',
-            }}
-          />
-          {/* Side fades */}
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background: 'linear-gradient(to right, #F7F6F3 0%, transparent 12%, transparent 88%, #F7F6F3 100%)',
-            }}
-          />
-        </motion.div>
+      <div className="relative z-30 flex flex-col min-h-screen px-5 sm:px-6 pt-[46vh] sm:pt-28 pb-24 sm:pb-32">
 
-        <div className="max-w-6xl mx-auto w-full flex-1 flex items-center">
+        <div className="max-w-6xl mx-auto w-full flex-1 flex items-center sm:items-center">
           <div className="flex flex-col justify-center w-full max-w-xl">
 
             {/* Live badge */}
