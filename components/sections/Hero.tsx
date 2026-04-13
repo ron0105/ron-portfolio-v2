@@ -260,6 +260,42 @@ export default function Hero() {
 
       {/* ── 7: Content ── */}
       <div className="relative z-30 flex flex-col min-h-screen px-5 sm:px-6 pt-20 sm:pt-28 pb-24 sm:pb-32">
+        {/* Mobile-only full-bleed portrait — breaks out of horizontal padding */}
+        <motion.div
+          className="block md:hidden -mx-5 sm:-mx-6 mb-10 relative overflow-hidden"
+          style={{ aspectRatio: '4/5' }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+        >
+          <Image
+            src="/roro.png"
+            alt="Rohan"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            style={{
+              objectPosition: '50% 10%',
+              filter: 'contrast(1.06) brightness(0.94)',
+            }}
+            priority
+          />
+          {/* Gradient dissolve into paper background */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: 'linear-gradient(to bottom, transparent 30%, rgba(247,246,243,0.5) 65%, #F7F6F3 100%)',
+            }}
+          />
+          {/* Side fades */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: 'linear-gradient(to right, #F7F6F3 0%, transparent 12%, transparent 88%, #F7F6F3 100%)',
+            }}
+          />
+        </motion.div>
+
         <div className="max-w-6xl mx-auto w-full flex-1 flex items-center">
           <div className="flex flex-col justify-center w-full max-w-xl">
 
@@ -277,31 +313,6 @@ export default function Hero() {
               <span className="font-body text-[10px] sm:text-xs text-muted tracking-widest uppercase">
                 Currently building: The Adda Labs
               </span>
-            </motion.div>
-
-            {/* Mobile-only portrait — visible below md, replaced by full bleed on md+ */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.97 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.55, ease: 'easeOut', delay: 0.1 }}
-              className="block md:hidden mb-8 relative w-[68vw] max-w-[240px] aspect-square overflow-hidden self-start"
-              style={{
-                maskImage: 'linear-gradient(to bottom, black 55%, transparent 100%)',
-                WebkitMaskImage: 'linear-gradient(to bottom, black 55%, transparent 100%)',
-              }}
-            >
-              <Image
-                src="/roro.png"
-                alt="Rohan"
-                fill
-                sizes="68vw"
-                className="object-cover"
-                style={{
-                  objectPosition: '50% 8%',
-                  filter: 'contrast(1.06) brightness(0.96)',
-                }}
-                priority
-              />
             </motion.div>
 
             {/* Heading : parallax + lift + scroll scale + scroll filter */}
