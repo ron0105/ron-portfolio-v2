@@ -58,9 +58,9 @@ body::after {
     --color-border: #272727;
   }
 
-  /* Footer is always a dark section — pin its CSS vars to light-mode values
-     so bg-ink stays black and text-paper stays cream regardless of theme */
-  footer {
+  /* Sections that are always dark (footer, principles) — pin CSS vars to
+     light-mode values so bg-ink stays black and text-paper stays cream */
+  footer, .always-dark {
     --color-paper: #F7F6F3;
     --color-ink: #0D0D0D;
     --color-muted: #6B6B6B;

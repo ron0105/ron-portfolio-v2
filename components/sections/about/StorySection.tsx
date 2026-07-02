@@ -6,25 +6,25 @@ const blocks = [
   {
     label: 'How I got here',
     content: [
-      "I didn't start as a developer. I started as someone who kept having ideas and couldn't find anyone to build them.",
-      "So I just started doing it myself. First design, then code, then figuring out how to make both feel so easy you don't even notice them.",
-      "Now I use AI as a collaborator — not to replace the thinking, but to move faster on everything around it. The ideas still have to be good.",
+      "I didn't start as a developer. I started as someone who kept having ideas and couldn't find anyone to build them — so I learned to build them myself.",
+      "That became The Adda Labs: a Mumbai-based studio where I test AI-powered products and workflows with real clients before turning them into something bigger.",
+      "AI didn't change what I do — it changed how fast I do it. The ideas still have to be good. The judgment still has to be mine.",
     ],
   },
   {
     label: 'How I think',
     content: [
-      "I'd rather try something once than plan it for a month. I write things down, and I change my mind as soon as I learn something new.",
-      "The best way to understand something is to build it — and the best way to understand AI is to use it live, on real problems, not in demos.",
-      "I don't separate design from building. How it looks and how it works are parts of the same conversation.",
+      "I'd rather try something once than plan it for a month. I write things down, change my mind fast, and start before I'm ready.",
+      "The best way to understand AI is to use it on real problems — not in demos. I run it live, in front of clients, in front of a camera.",
+      "Design and building are the same conversation. If it looks broken, it probably is. If it feels right, it usually works.",
     ],
   },
   {
     label: 'What drives me',
     content: [
-      "I want to build things that feel like they should have existed all along. The kind of stuff that makes you think: why wasn't this already here?",
-      "I'm drawn to problems that look simple but aren't. Most solutions add complexity; I'd rather remove it.",
-      "I document this through Learn With Ron — a YouTube channel where I test AI tools live, make mistakes on camera, and share what actually works.",
+      "I want to build things that feel like they should have existed already. The kind of product that makes you ask: why wasn't this here before?",
+      "I'm most interested in Indian founders and small businesses — they have real problems, real urgency, and almost no good AI tooling built for their context.",
+      "Learn With Ron is where I document this: live AI sessions, real mistakes, honest takes on what actually works vs. what just sounds good on LinkedIn.",
     ],
   },
 ]

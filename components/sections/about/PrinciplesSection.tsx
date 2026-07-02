@@ -13,7 +13,7 @@ const principles = [
 
 export default function PrinciplesSection() {
   return (
-    <section className="py-28 px-6 bg-ink">
+    <section className="py-28 px-6 bg-ink always-dark">
       <div className="max-w-6xl mx-auto">
         <motion.span
           initial={{ opacity: 0 }}

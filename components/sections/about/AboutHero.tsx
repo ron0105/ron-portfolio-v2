@@ -92,8 +92,8 @@ export default function AboutHero() {
             transition={lockIn}
             className="font-body text-xl md:text-2xl text-ink/60 max-w-2xl leading-relaxed mt-10"
           >
-            I sit at the overlap of AI, design, and business.
-            Co-founder, builder, creator. I test things live and share what I learn.
+            Co-founder of The Adda Labs, based in Mumbai.
+            I use AI to move faster, build in public, and share what I actually learn — not what looks good in hindsight.
           </motion.p>
         </motion.div>
       </div>
