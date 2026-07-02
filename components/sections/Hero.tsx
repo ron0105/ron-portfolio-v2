@@ -301,7 +301,7 @@ export default function Hero() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
               </span>
               <span className="font-body text-[10px] sm:text-xs text-muted tracking-widest uppercase">
-                Currently building: The Adda Labs
+                Currently building: The Adda Labs · Learn With Ron
               </span>
             </motion.div>
 
@@ -352,7 +352,7 @@ export default function Hero() {
                 transition={{ type: 'spring', stiffness: 120, damping: 18 }}
                 className="font-body text-base sm:text-lg md:text-xl text-ink/60 max-w-sm leading-relaxed mb-8 sm:mb-10"
               >
-                I test ideas, keep what works, and build what's next.
+                I use AI to move faster, build in public, and share what I learn.
               </motion.p>
             </motion.div>
 

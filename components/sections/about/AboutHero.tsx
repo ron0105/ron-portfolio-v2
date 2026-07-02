@@ -92,8 +92,8 @@ export default function AboutHero() {
             transition={lockIn}
             className="font-body text-xl md:text-2xl text-ink/60 max-w-2xl leading-relaxed mt-10"
           >
-            I sit at the overlap of business, design, and technology.
-            I begin where most wait. I start, and find the way.
+            I sit at the overlap of AI, design, and business.
+            Co-founder, builder, creator. I test things live and share what I learn.
           </motion.p>
         </motion.div>
       </div>

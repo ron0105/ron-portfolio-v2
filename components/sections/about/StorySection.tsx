@@ -8,15 +8,15 @@ const blocks = [
     content: [
       "I didn't start as a developer. I started as someone who kept having ideas and couldn't find anyone to build them.",
       "So I just started doing it myself. First design, then code, then figuring out how to make both feel so easy you don't even notice them.",
-      "I've built apps, websites, and experiments. Most were just for me. A few actually worked. All of them taught me something.",
+      "Now I use AI as a collaborator — not to replace the thinking, but to move faster on everything around it. The ideas still have to be good.",
     ],
   },
   {
     label: 'How I think',
     content: [
       "I'd rather try something once than plan it for a month. I write things down, and I change my mind as soon as I learn something new.",
-      "The best way to understand something is to build it. Even a messy version. Especially a messy version.",
-      "I don't separate design from building. To me, how it looks and how it works are parts of the same conversation.",
+      "The best way to understand something is to build it — and the best way to understand AI is to use it live, on real problems, not in demos.",
+      "I don't separate design from building. How it looks and how it works are parts of the same conversation.",
     ],
   },
   {
@@ -24,7 +24,7 @@ const blocks = [
     content: [
       "I want to build things that feel like they should have existed all along. The kind of stuff that makes you think: why wasn't this already here?",
       "I'm drawn to problems that look simple but aren't. Most solutions add complexity; I'd rather remove it.",
-      "I build in public because the process is just as interesting as the result, both for me and, hopefully, for you too.",
+      "I document this through Learn With Ron — a YouTube channel where I test AI tools live, make mistakes on camera, and share what actually works.",
     ],
   },
 ]
