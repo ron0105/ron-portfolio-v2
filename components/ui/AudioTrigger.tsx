@@ -39,7 +39,18 @@ export default function AudioTrigger({
             ))}
           </div>
         ) : (
-          <div className={`rounded-full border-[1.5px] border-muted/50 group-hover:bg-accent group-hover:border-accent transition-all duration-300 ${iconOnly ? 'w-4 h-4' : 'w-3 h-3'}`} />
+          <svg
+            width={iconOnly ? 18 : 16}
+            height={iconOnly ? 18 : 16}
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="group-hover:text-ink transition-colors duration-300"
+          >
+            <path d="M3 11V9a6 6 0 0 1 12 0v2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <rect x="1.5" y="10" width="3" height="5" rx="1.5" fill="currentColor"/>
+            <rect x="13.5" y="10" width="3" height="5" rx="1.5" fill="currentColor"/>
+          </svg>
         )}
       </div>
       {!iconOnly && (

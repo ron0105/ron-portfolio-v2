@@ -48,6 +48,27 @@ body::after {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3%3Ffilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
+/* Dark theme — must be in @layer base to override @layer theme vars */
+@layer base {
+  [data-theme="dark"] {
+    --color-paper: #111111;
+    --color-ink: #F2F1EE;
+    --color-paper-dark: #1A1A1A;
+    --color-muted: #888888;
+    --color-border: #272727;
+  }
+
+  /* Footer is always a dark section — pin its CSS vars to light-mode values
+     so bg-ink stays black and text-paper stays cream regardless of theme */
+  footer {
+    --color-paper: #F7F6F3;
+    --color-ink: #0D0D0D;
+    --color-muted: #6B6B6B;
+    --color-border: #E3E2DF;
+  }
+}
+
+
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,

@@ -103,7 +103,7 @@ export default function Experiments() {
   const featured = experiments.slice(0, 4)
 
   return (
-    <section id="experiments" className="relative z-20 w-full pt-12 sm:pt-20 pb-24 sm:pb-48 px-5 sm:px-6 -mt-[8vh] sm:-mt-[15vh]">
+    <section id="experiments" className="relative z-20 w-full pt-12 sm:pt-20 pb-24 sm:pb-48 px-5 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

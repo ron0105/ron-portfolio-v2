@@ -15,6 +15,7 @@ import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import { useState } from 'react'
 import AudioTrigger from '@/components/ui/AudioTrigger'
+import { useTheme } from '@/context/ThemeContext'
 
 const ShaderCanvas = dynamic(() => import('@/components/ui/ShaderCanvas'), {
   ssr: false,
@@ -32,6 +33,8 @@ export default function Hero() {
   const heroRef = useRef<HTMLElement>(null)
   const [ripples, setRipples] = useState<Ripple[]>([])
   const rippleId = useRef(0)
+  const { theme } = useTheme()
+  const paperColor = theme === 'dark' ? '#111111' : '#F7F6F3'
 
   /* Boolean state drives letter-spacing spring on heading */
   const [isFocused, setIsFocused] = useState(false)
@@ -172,6 +175,16 @@ export default function Hero() {
         <ShaderCanvas className="w-full h-full" focusRef={shaderFocusRef} />
       </div>
 
+      {/* ── 2: Dark mode overlay — dims the light shader in dark mode ── */}
+      {theme === 'dark' && (
+        <div
+          className="absolute inset-0 pointer-events-none z-[1]"
+          style={{
+            background: 'linear-gradient(to right, rgba(17,17,17,0.82) 0%, rgba(17,17,17,0.65) 38%, rgba(17,17,17,0.2) 62%, transparent 75%)',
+          }}
+        />
+      )}
+
       {/* ── 3: Vignette : edges pull focus inward ── */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -256,8 +269,9 @@ export default function Hero() {
         <div
           className="absolute inset-0"
           style={{
-            background:
-              'linear-gradient(to bottom, transparent 0%, transparent 42%, rgba(247,246,243,0.2) 52%, rgba(247,246,243,0.7) 62%, rgba(247,246,243,0.95) 70%, #F7F6F3 76%)',
+            background: theme === 'dark'
+              ? `linear-gradient(to bottom, transparent 0%, transparent 42%, rgba(17,17,17,0.2) 52%, rgba(17,17,17,0.7) 62%, rgba(17,17,17,0.95) 70%, #111111 76%)`
+              : `linear-gradient(to bottom, transparent 0%, transparent 42%, rgba(247,246,243,0.2) 52%, rgba(247,246,243,0.7) 62%, rgba(247,246,243,0.95) 70%, #F7F6F3 76%)`,
           }}
         />
       </motion.div>
@@ -416,7 +430,7 @@ export default function Hero() {
         className="absolute bottom-0 left-0 right-0 pointer-events-none z-10"
         style={{
           height: '40vh',
-          background: 'linear-gradient(to bottom, transparent 0%, #F7F6F3 40%, #F7F6F3 100%)',
+          background: `linear-gradient(to bottom, transparent 0%, ${paperColor} 40%, ${paperColor} 100%)`,
         }}
       />
 

@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import AudioTrigger from '@/components/ui/AudioTrigger'
 import { usePathname } from 'next/navigation'
+import { useTheme } from '@/context/ThemeContext'
 
 const links = [
   { label: 'Work', href: '/work' },
@@ -17,6 +18,7 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const pathname = usePathname()
+  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60)
@@ -42,8 +44,10 @@ export default function Nav() {
         transition={{ duration: 0.2, ease: 'easeOut' }}
         className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
           scrolled
-            ? 'py-4 bg-paper/85 backdrop-blur-xl border-b border-border/50 shadow-sm'
-            : 'py-6 bg-paper/55 backdrop-blur-md'
+            ? 'py-4 bg-paper/90 backdrop-blur-xl border-b border-border/50 shadow-sm'
+            : theme === 'dark'
+              ? 'py-6 bg-paper backdrop-blur-md'
+              : 'py-6 bg-paper/55 backdrop-blur-md'
         }`}
       >
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
@@ -81,6 +85,29 @@ export default function Nav() {
 
           <div className="hidden md:flex items-center gap-8">
             <AudioTrigger />
+            <button
+              onClick={toggleTheme}
+              aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
+              className="relative flex items-center justify-center w-4 h-4 text-muted/60 hover:text-ink transition-colors duration-300 cursor-pointer"
+            >
+              {theme === 'light' ? (
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="7" cy="7" r="3" stroke="currentColor" strokeWidth="1.5"/>
+                  <line x1="7" y1="0.5" x2="7" y2="2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                  <line x1="7" y1="12" x2="7" y2="13.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                  <line x1="13.5" y1="7" x2="12" y2="7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                  <line x1="2" y1="7" x2="0.5" y2="7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                  <line x1="11.3" y1="2.7" x2="10.24" y2="3.76" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                  <line x1="3.76" y1="10.24" x2="2.7" y2="11.3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                  <line x1="11.3" y1="11.3" x2="10.24" y2="10.24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                  <line x1="3.76" y1="3.76" x2="2.7" y2="2.7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                </svg>
+              ) : (
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.5 8.5A6 6 0 0 1 5.5 1.5a6 6 0 1 0 7 7z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              )}
+            </button>
             <Link
               href="/contact"
               className="bg-ink text-paper text-[10px] uppercase font-bold tracking-widest px-6 py-2.5 rounded-full hover:bg-accent transition-colors duration-300"

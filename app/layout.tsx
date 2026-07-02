@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import PageTransition from '@/components/ui/PageTransition'
 import { AudioProvider } from '@/context/AudioContext'
+import { ThemeProvider } from '@/context/ThemeContext'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -23,7 +24,19 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable}`}>
+    <html lang="en" className={`${inter.variable}`} suppressHydrationWarning>
+      <head>
+        {/* Prevent flash of wrong theme on load */}
+        <script dangerouslySetInnerHTML={{ __html: `
+          (function() {
+            try {
+              var saved = localStorage.getItem('theme');
+              var preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+              document.documentElement.setAttribute('data-theme', saved || preferred);
+            } catch(e) {}
+          })();
+        `}} />
+      </head>
       <body className="bg-paper text-ink font-body antialiased overflow-x-hidden">
         {/* Global grain: one texture across the entire page, no per-section noise */}
         <svg
@@ -37,9 +50,11 @@ export default function RootLayout({
           </filter>
           <rect width="100%" height="100%" filter="url(#global-noise)" />
         </svg>
-        <AudioProvider>
-          <PageTransition>{children}</PageTransition>
-        </AudioProvider>
+        <ThemeProvider>
+          <AudioProvider>
+            <PageTransition>{children}</PageTransition>
+          </AudioProvider>
+        </ThemeProvider>
       </body>
     </html>
   )
