@@ -63,7 +63,7 @@ export default function LinksHero() {
             Rohan Tiwarekar<span className="text-accent">.</span>
           </h1>
           <p className="font-body text-base text-muted mt-4 leading-relaxed">
-            Founder · AI + Design · Mumbai. Learning in public so you don&apos;t have to start from scratch.
+            Founder · Builder · Cat dad · Mumbai. Building a company with AI and filming the mistakes.
           </p>
         </motion.div>
 
