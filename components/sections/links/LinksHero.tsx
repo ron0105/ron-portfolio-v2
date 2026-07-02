@@ -35,7 +35,7 @@ const links = [
   {
     label: 'The Adda Labs',
     handle: 'My studio',
-    note: 'AI consulting for real businesses',
+    note: 'Consulting — strategy, automation, storytelling',
     href: '/work',
     primary: false,
   },
@@ -63,7 +63,7 @@ export default function LinksHero() {
             Rohan Tiwarekar<span className="text-accent">.</span>
           </h1>
           <p className="font-body text-base text-muted mt-4 leading-relaxed">
-            Founder · Builder · Cat dad · Mumbai. Building a company with AI and filming the mistakes.
+            Founder · Builder · Cat dad · Mumbai. Building a company and filming the journey.
           </p>
         </motion.div>
 
