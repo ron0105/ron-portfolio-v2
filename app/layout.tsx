@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import PageTransition from '@/components/ui/PageTransition'
 import { AudioProvider } from '@/context/AudioContext'
+import { Analytics } from '@vercel/analytics/next'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -40,6 +41,7 @@ export default function RootLayout({
         <AudioProvider>
           <PageTransition>{children}</PageTransition>
         </AudioProvider>
+        <Analytics />
       </body>
     </html>
   )
