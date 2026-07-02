@@ -16,6 +16,12 @@ const ways = [
     note: 'See what I build',
   },
   {
+    label: 'X',
+    value: '@build_withron',
+    href: 'https://x.com/build_withron',
+    note: 'For quick thoughts and threads',
+  },
+  {
     label: 'LinkedIn',
     value: 'linkedin.com/in/ronnnn',
     href: 'https://www.linkedin.com/in/ronnnn/',
