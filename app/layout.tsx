@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 import PageTransition from '@/components/ui/PageTransition'
 import { AudioProvider } from '@/context/AudioContext'
@@ -13,9 +14,13 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Rohan | Builder',
+  metadataBase: new URL('https://buildwithron.com'),
+  title: {
+    default: 'Rohan Tiwarekar — Founder & Builder',
+    template: '%s',
+  },
   description:
-    "I build things. Some are experiments, some are just ideas, but they're all work in progress.",
+    'Co-founder of The Adda Labs. Building a company and filming the journey — live AI experiments, honest notes, real work.',
 }
 
 export default function RootLayout({
@@ -55,6 +60,7 @@ export default function RootLayout({
             <PageTransition>{children}</PageTransition>
           </AudioProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
