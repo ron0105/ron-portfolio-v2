@@ -3,7 +3,7 @@ title: "Ep 001 — Can AI replace my girlfriend's job?"
 excerpt: "We gave Claude 65 minutes of raw footage and asked for a 30-second cut. Live, with a professional video editor watching."
 date: Jul 2026
 episode: 1
-youtubeUrl: https://www.youtube.com/@learn_withron
+youtubeUrl: https://www.youtube.com/watch?v=Hh2mA0ZYqKc
 status: aired
 question: Can AI actually replace a video editor's job?
 verdict: "AI did the mechanical work perfectly. The footage was the bottleneck — and choosing what's worth filming is still a human job."

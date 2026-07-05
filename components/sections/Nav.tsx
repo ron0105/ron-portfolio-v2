@@ -12,7 +12,6 @@ const links = [
   { label: 'Learn', href: '/learn' },
   { label: 'Notes', href: '/notes' },
   { label: 'About', href: '/about' },
-  { label: 'Talk', href: '/contact' },
 ]
 
 export default function Nav() {
@@ -60,7 +59,7 @@ export default function Nav() {
           </Link>
 
           {/* Desktop nav: centered to avoid hair overlap on right */}
-          <ul className="hidden md:flex items-center gap-12 absolute left-1/2 -translate-x-1/2">
+          <ul className="hidden md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
             {links.map((link) => {
               const isActive = pathname === link.href
               return (

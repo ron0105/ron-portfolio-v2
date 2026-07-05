@@ -7,6 +7,6 @@ episode:
   text: "Ep 002 — we give the AI good footage this time. Live Wednesday."
   href: /learn/ep-001-can-ai-replace-a-video-editor
 note:
-  text: "Doing more, planning less"
-  href: /notes/doing-more-planning-less
+  text: "Discovery comes after the contract"
+  href: /notes/discovery-comes-after-the-contract
 ---
