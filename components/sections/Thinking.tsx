@@ -174,7 +174,7 @@ export default function Thinking() {
 
         <div className="mt-12">
           <Link
-            href="/thinking"
+            href="/notes"
             className="inline-flex items-center gap-3 font-body text-sm text-muted hover:text-ink transition-colors duration-200 group cursor-pointer"
           >
             Read all

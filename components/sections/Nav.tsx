@@ -9,8 +9,9 @@ import { useTheme } from '@/context/ThemeContext'
 
 const links = [
   { label: 'Work', href: '/work' },
+  { label: 'Learn', href: '/learn' },
+  { label: 'Notes', href: '/notes' },
   { label: 'About', href: '/about' },
-  { label: 'Thoughts', href: '/thinking' },
   { label: 'Talk', href: '/contact' },
 ]
 

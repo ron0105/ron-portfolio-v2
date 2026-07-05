@@ -17,8 +17,8 @@ const tiles = [
     label: 'YouTube',
     title: 'Learn With Ron',
     descriptor: 'I use AI live on camera. Watch what actually happens.',
-    href: 'https://www.youtube.com/@learn_withron',
-    external: true,
+    href: '/learn',
+    external: false,
   },
   {
     id: '03',
