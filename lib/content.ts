@@ -23,6 +23,28 @@ export type EpisodeMeta = {
   status: string
   question: string
   verdict: string
+  nextTease?: string
+}
+
+export type NowItem = { text: string; href: string }
+export type LiveStatus = {
+  status: 'offline' | 'live' | 'scheduled'
+  text: string
+  href: string
+}
+export type NowData = {
+  updated: string
+  building: NowItem
+  episode: NowItem
+  note: NowItem
+  live?: LiveStatus
+}
+
+export function getNow(): NowData | null {
+  const file = path.join(CONTENT_DIR, 'now.md')
+  if (!fs.existsSync(file)) return null
+  const { data } = matter(fs.readFileSync(file, 'utf-8'))
+  return data as NowData
 }
 
 function readCollection(collection: string) {

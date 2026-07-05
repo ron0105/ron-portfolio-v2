@@ -2,7 +2,7 @@ import Nav from '@/components/sections/Nav'
 import LearnHero from '@/components/sections/learn/LearnHero'
 import EpisodeList from '@/components/sections/learn/EpisodeList'
 import Footer from '@/components/sections/Footer'
-import { getEpisodes } from '@/lib/content'
+import { getEpisodes, getNow } from '@/lib/content'
 
 export const metadata = {
   title: 'Learn With Ron — Rohan Tiwarekar',
@@ -11,11 +11,12 @@ export const metadata = {
 
 export default function LearnPage() {
   const episodes = getEpisodes()
+  const upcoming = getNow()?.episode ?? null
   return (
     <main>
       <Nav />
       <LearnHero />
-      <EpisodeList episodes={episodes} />
+      <EpisodeList episodes={episodes} upcoming={upcoming} />
       <Footer />
     </main>
   )

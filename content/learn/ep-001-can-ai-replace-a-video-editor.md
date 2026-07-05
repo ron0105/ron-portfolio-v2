@@ -7,6 +7,7 @@ youtubeUrl: https://www.youtube.com/watch?v=Hh2mA0ZYqKc
 status: aired
 question: Can AI actually replace a video editor's job?
 verdict: "AI did the mechanical work perfectly. The footage was the bottleneck — and choosing what's worth filming is still a human job."
+nextTease: "Was the boring result a Claude problem or a footage problem?"
 ---
 
 ## The setup
