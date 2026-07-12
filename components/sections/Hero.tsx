@@ -27,7 +27,7 @@ interface Ripple {
   y: number
 }
 
-const headingLines = ["I build", "things that", "feel real."]
+const headingLines = ["I build stuff", "and film the", "messy parts."]
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null)
@@ -301,7 +301,7 @@ export default function Hero() {
       <div className="relative z-30 flex flex-col min-h-screen px-5 sm:px-6 pt-[52vh] sm:pt-28 pb-24 sm:pb-32">
 
         <div className="max-w-6xl mx-auto w-full flex-1 flex items-center sm:items-center">
-          <div className="flex flex-col justify-center w-full max-w-xl">
+          <div className="flex flex-col justify-center w-full max-w-2xl">
 
             {/* Live badge */}
             <motion.div
@@ -366,7 +366,7 @@ export default function Hero() {
                 transition={{ type: 'spring', stiffness: 120, damping: 18 }}
                 className="font-body text-base sm:text-lg md:text-xl text-ink/60 max-w-sm leading-relaxed mb-8 sm:mb-10"
               >
-                I use AI to move faster, build in public, and share what I learn.
+                The Adda Labs is the company. Learn With Ron is the camera. Everything lands here.
               </motion.p>
             </motion.div>
 
@@ -391,6 +391,13 @@ export default function Hero() {
               >
                 About me
               </Link>
+              <span
+                aria-hidden="true"
+                className="hidden sm:inline-block text-muted/70 text-xl"
+                style={{ fontFamily: 'var(--font-caveat), cursive', rotate: '-2deg' }}
+              >
+                ↜ start here
+              </span>
             </motion.div>
 
             {/* Audio experience trigger */}

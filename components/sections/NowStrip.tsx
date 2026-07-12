@@ -70,9 +70,14 @@ export default function NowStrip() {
           <div className="flex items-baseline justify-between mb-10">
             <span className="font-body text-xs text-muted uppercase tracking-widest flex items-center gap-2.5">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              Now
+              Right now
             </span>
-            <span className="font-body text-xs text-muted/50">Updated {now.updated}</span>
+            <span
+              className="text-muted/60 text-lg"
+              style={{ fontFamily: 'var(--font-caveat), cursive', rotate: '-1deg' }}
+            >
+              updated {now.updated.toLowerCase()} ✓
+            </span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
