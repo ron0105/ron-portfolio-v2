@@ -19,10 +19,7 @@
       "Bash(pip install:*)",
       "WebFetch(domain:21st.dev)",
       "Bash(echo \"PID: $!\")",
-      "Bash(curl:*)",
-      "Bash(sed -i '' 's|mailto:hello@buildwithron.com|mailto:rohan0105@gmail.com|g' /Users/ron/Desktop/ron-portfolio-v2/components/sections/Footer.tsx)",
-      "Bash(sed -i '' 's|mailto:hello@buildwithron.com|mailto:rohan0105@gmail.com|g' /Users/ron/Desktop/ron-portfolio-v2/components/sections/contact/ContactHero.tsx)",
-      "Bash(sed -i '' 's|mailto:hello@ron.xyz|mailto:rohan0105@gmail.com|g' /Users/ron/Desktop/ron-portfolio-v2/components/sections/PersonalStrip.tsx)"
+      "Bash(curl:*)"
     ]
   }
 }
