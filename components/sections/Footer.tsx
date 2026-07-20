@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const socials = [
   { label: 'YouTube', href: 'https://www.youtube.com/@learn_withron' },
-  { label: 'Instagram', href: 'https://www.instagram.com/oldmonkpaapi/' },
+  { label: 'Instagram', href: 'https://www.instagram.com/build.with.ron/' },
   { label: 'X', href: 'https://x.com/build_withron' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ronnnn/' },
   { label: 'GitHub', href: 'https://github.com/ron0105' },

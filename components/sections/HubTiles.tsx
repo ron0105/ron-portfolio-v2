@@ -25,7 +25,7 @@ const tiles = [
     label: 'Life',
     title: 'Life',
     descriptor: 'The stuff that happens outside the work.',
-    href: 'https://www.instagram.com/oldmonkpaapi/',
+    href: 'https://www.instagram.com/build.with.ron/',
     external: true,
   },
 ]

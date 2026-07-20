@@ -20,9 +20,9 @@ const links = [
   },
   {
     label: 'Instagram',
-    handle: '@oldmonkpaapi',
+    handle: '@build.with.ron',
     note: 'Life, chaos, the fun stuff',
-    href: 'https://www.instagram.com/oldmonkpaapi/',
+    href: 'https://www.instagram.com/build.with.ron/',
     primary: false,
   },
   {
